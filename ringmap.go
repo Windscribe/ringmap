@@ -52,7 +52,7 @@ func (m *RingMap) Put(key, value interface{}) bool {
 	if didExist {
 		m.Delete(key)
 	}
-	m.orderedMap.Set(key, value)
+	m.Set(key, value)
 
 	return !didExist
 }
